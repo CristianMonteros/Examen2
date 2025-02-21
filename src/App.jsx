@@ -13,6 +13,7 @@ function App() {
       <h1>Buscador de paises</h1>
       <Search setResults = {setResults} setError={setError}/>
       <Results results = {results} error={error}/>
+      <History countries={countries.length == 1 ? countries[0] : undefined }/>
 
 </>
   )
