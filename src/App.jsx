@@ -5,13 +5,14 @@ import { Results } from './components/Results'
 
 function App() {
   const [results,setResults] = useState ([]) 
+  const [error,setError] = useState(false)
   console.log(results) 
 
   return (
     <>
       <h1>Buscador de paises</h1>
-      <Search setResults = {setResults}/>
-      <Results results = {results}/>
+      <Search setResults = {setResults} setError={setError}/>
+      <Results results = {results} error={error}/>
 
 </>
   )

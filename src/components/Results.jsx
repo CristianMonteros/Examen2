@@ -1,5 +1,11 @@
-export const Results = ({results}) => { 
-    console.log(results)
+export const Results = ({results, error}) => { 
+    if(error){
+      return <>
+      <h2>Resultados</h2>
+      <h3>No se encontro el pais</h3>
+      
+      </>
+    }
     return <>
       <h2>Resultados</h2>
       {results.map((element, index) => {
